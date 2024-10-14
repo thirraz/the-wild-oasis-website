@@ -29,14 +29,6 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${josefin.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
 			>
-				<Image
-					src={bg}
-					fill
-					placeholder="blur"
-					quality={80}
-					className="object-cover object-top"
-					alt="Mountains and forests with two cabins"
-				/>
 				<Header />
 				<div className="flex-1 px-8 py-12">
 					<main className="max-w-7xl mx-auto ">{children}</main>
