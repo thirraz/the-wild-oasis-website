@@ -2,13 +2,13 @@ import CabinList from "@/app/_components/CabinList"
 import { Suspense } from "react"
 import Spinner from "@/app/_components/Spinner"
 
+//export const revalidate = 15 // 15 seconds
+
 export const metadata = {
 	title: "Cabins"
 }
 
 export default function Page() {
-	// CHANGE
-
 	return (
 		<div>
 			<h1 className="text-4xl mb-5 text-accent-400 font-medium">
