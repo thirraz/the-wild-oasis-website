@@ -1,8 +1,11 @@
 import CabinList from "@/app/_components/CabinList"
 import { Suspense } from "react"
 import Spinner from "@/app/_components/Spinner"
+import Filter from "../_components/Filter"
 
-//export const revalidate = 15 // 15 seconds
+// useSearchParams props turned revalidate useless,
+// because it only works in static generated pages
+// export const revalidate = 3600
 
 export const metadata = {
 	title: "Cabins"
@@ -25,7 +28,11 @@ export default function Page({ searchParams }) {
 				peaceful, calm vacation. Welcome to paradise.
 			</p>
 
-			<Suspense fallback={<Spinner />}>
+			<div className="flex justify-end mb-8">
+				<Filter />
+			</div>
+
+			<Suspense fallback={<Spinner />} key={filter}>
 				<CabinList filter={filter} />
 			</Suspense>
 		</div>

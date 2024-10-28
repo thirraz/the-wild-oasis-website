@@ -19,11 +19,11 @@ export default async function CabinList({ filter }) {
 			break
 		case "medium":
 			displayedCabins = cabins.filter(
-				cabin => cabin.maxCapacity > 3 && cabin.maxCapacity < 7
+				cabin => cabin.maxCapacity > 3 && cabin.maxCapacity <= 7
 			)
 			break
 		case "large":
-			displayedCabins = cabins.filter(cabin => cabin.maxCapacity >= 8)
+			displayedCabins = cabins.filter(cabin => cabin.maxCapacity > 7)
 			break
 	}
 
