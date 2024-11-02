@@ -1,7 +1,8 @@
 import CabinList from "@/app/_components/CabinList"
 import { Suspense } from "react"
 import Spinner from "@/app/_components/Spinner"
-import Filter from "../_components/Filter"
+import Filter from "@/app/_components/Filter"
+import ReservationReminder from "@/app/_components/ReservationReminder"
 
 // useSearchParams props turned revalidate useless,
 // because it only works in static generated pages
@@ -34,6 +35,7 @@ export default function Page({ searchParams }) {
 
 			<Suspense fallback={<Spinner />} key={filter}>
 				<CabinList filter={filter} />
+				<ReservationReminder />
 			</Suspense>
 		</div>
 	)
